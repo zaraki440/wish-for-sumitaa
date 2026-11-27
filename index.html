@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Little Surprise</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <div class="birthday-layout">
+
+            <!-- LEFT SIDE: Birthday Message -->
+            <div class="birthday-text">
+
+                <p class="date">28 NOVEMBER 2026</p>
+
+                <h1>Happy Birthday!</h1>
+
+                <p class="subtitle">
+                    I made a little something for you.
+                    Nothing too serious, just a small surprise.
+                </p>
+
+                <h2>Would you like to see it?</h2>
+
+                <div class="buttons">
+
+                    <button onclick="acceptConfession()">
+                        LET'S SEE!
+                    </button>
+
+                    <button class="no" onclick="declineConfession()">
+                        MAYBE LATER
+                    </button>
+
+                </div>
+
+                <p class="footer">
+                    A little surprise from Shiv.
+                </p>
+
+            </div>
+
+
+            <!-- RIGHT SIDE: Birthday Video -->
+            <div class="birthday-image">
+
+                <video class="hero-video"
+                       autoplay
+                       loop
+                       playsinline>
+
+                    <source src="videos/her-video.mp4" type="video/mp4">
+
+                    Your browser does not support video.
+
+                </video>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

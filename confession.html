@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Something I Want to Tell You</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container confession-container">
+
+        <p class="date">A MESSAGE FROM SHIV</p>
+
+        <h1>Something I've Wanted to Say...</h1>
+
+        <div class="letter" id="letter">
+            Loading my message...
+        </div>
+
+        <p class="signature">— Shiv</p>
+
+        <!-- ONE MORE SURPRISE -->
+        <div class="extra-surprise">
+
+            <h2>Wait... one more thing! 👀</h2>
+
+            <p class="subtitle">
+                Would you like to know something else?
+            </p>
+
+            <button onclick="openExtra()">
+                YES, TELL ME!
+            </button>
+
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+    <script>
+        fetch("message.json")
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Message unavailable");
+                }
+                return response.json();
+            })
+            .then(data => {
+                document.getElementById("letter").textContent =
+                    data.confession;
+            })
+            .catch(() => {
+                document.getElementById("letter").textContent =
+                    "Hey, it's Shiv. I don't know if you still remember me, haha.";
+            });
+    </script>
+<audio id="bgMusic" autoplay loop>
+    <source src="audio/background.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+    const music = document.getElementById("bgMusic");
+
+    music.volume = 0.4;
+
+    music.play().catch(() => {
+        console.log("Browser requires user interaction to play music.");
+    });
+</script>
+</body>
+</html>

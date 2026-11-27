@@ -1,0 +1,257 @@
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    min-height: 100vh;
+    background: radial-gradient(circle, #35121d, #100b10 75%);
+    color: white;
+    font-family: Georgia, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+/* MAIN CONTAINER */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    text-align: center;
+    padding: 30px;
+}
+
+/* BIRTHDAY LAYOUT */
+.birthday-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+}
+
+.birthday-text {
+    flex: 1;
+    text-align: left;
+}
+
+.birthday-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* DATE */
+.date {
+    color: #ff667d;
+    letter-spacing: 5px;
+    font-size: 12px;
+    margin-bottom: 25px;
+}
+
+/* HEADINGS */
+h1 {
+    font-size: clamp(35px, 7vw, 55px);
+    color: #ff526d;
+    margin-bottom: 25px;
+    text-shadow: 0 0 20px #a91f43;
+}
+
+h2 {
+    font-size: 22px;
+    margin: 30px 0;
+    line-height: 1.5;
+}
+
+/* SUBTITLE */
+.subtitle {
+    color: #d9bfc5;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* BUTTONS */
+.buttons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+button {
+    background: #b52b49;
+    border: 1px solid #ff7188;
+    color: white;
+    padding: 14px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+    margin: 8px;
+}
+
+button:hover {
+    background: #ed4565;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ed4565;
+}
+
+button.no {
+    background: #30232a;
+    border-color: #59414a;
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 50px;
+    color: #977d85;
+    font-size: 13px;
+}
+
+/* BIRTHDAY VIDEO */
+.hero-video {
+    width: 100%;
+    max-width: 380px;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+    border: 1px solid #8D1729;
+    box-shadow: 0 0 25px rgba(169, 31, 67, 0.25);
+}
+
+/* PAGE ANIMATION */
+.page {
+    display: none;
+    animation: fadeIn 1s ease;
+}
+
+.page.active {
+    display: block;
+}
+
+/* CONFESSION LETTER */
+#letter {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,100,130,0.3);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: left;
+    line-height: 1.9;
+    color: #f1dce2;
+    white-space: pre-line;
+}
+
+.signature {
+    margin-top: 25px;
+    color: #ff7188;
+    font-size: 22px;
+}
+
+/* ONE MORE SURPRISE */
+.extra-surprise {
+    margin-top: 40px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 100, 130, 0.3);
+}
+
+/* STARGIRL MESSAGE */
+.stargirl-message {
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 100, 130, 0.25);
+    border-radius: 15px;
+    color: #d9bfc5;
+    font-size: 17px;
+    line-height: 1.9;
+    text-align: center;
+}
+
+.stargirl-message p {
+    margin-bottom: 20px;
+}
+
+/* SAD CAT IMAGE */
+.sad-cat {
+    width: 100%;
+    max-width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 1px solid #8D1729;
+    margin: 20px auto;
+    display: block;
+}
+
+/* FADE ANIMATION */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 700px) {
+
+    body {
+        align-items: flex-start;
+    }
+
+    .container {
+        width: 95%;
+        padding: 25px 10px;
+    }
+
+    .birthday-layout {
+        flex-direction: column-reverse;
+        gap: 25px;
+    }
+
+    .birthday-text {
+        text-align: center;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .hero-video {
+        max-width: 280px;
+        height: 330px;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+    audio {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    margin: 25px auto;
+    opacity: 0.8;
+}
+
+}

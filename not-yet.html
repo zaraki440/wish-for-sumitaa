@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Oh no...</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <p class="date">AFTER HOURS</p>
+
+        <h1>Oh no... 🥺</h1>
+
+        <img
+            src="images/sad-cat.gif"
+            alt="Sad cat"
+            class="sad-cat"
+        >
+
+        <h2>That's a little sad...</h2>
+
+        <p class="subtitle">
+            I spent almost two weeks building
+            this little website.
+        </p>
+
+        <h2>Would you give me another chance?</h2>
+
+        <button onclick="acceptConfession()">
+            Okay, I'll listen!
+        </button>
+
+        <p class="footer">
+            No pressure though. Enjoy your birthday!
+        </p>
+
+    </main>
+
+    <script src="script.js"></script>
+    <audio id="bgMusic" autoplay loop>
+    <source src="audio/cry.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+    const music = document.getElementById("bgMusic");
+
+    music.volume = 0.4;
+
+    music.play().catch(() => {
+        console.log("Browser requires user interaction to play music.");
+    });
+
+</body>
+</html>
